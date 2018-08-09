@@ -37,7 +37,7 @@ pip install -r requirements.txt
 ### Main Program
 
 ```
-./scripts/run bulbasaur charmander
+python scripts/run.py bulbasaur charmander
 ```
 
 ## Authors

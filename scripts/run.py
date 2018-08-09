@@ -12,7 +12,10 @@ class Pokemon:
         self.name = ''
         self.poke_type = []
         self.raw_data = raw_data
-        self.name = self.raw_data['forms'][0]['name']
+        try:
+            self.name = self.raw_data['forms'][0]['name']
+        except Exception:
+            self.name = 'error'
 
     def set_type(self, poke_type):
         self.poke_type = poke_type
@@ -59,8 +62,6 @@ class PokeSearch:
 
     def compare_pokemon_type(self, pokemon1, pokemon2):
         balance_index = 1
-        temp_balance_index = 1
-
         for poke_type1 in pokemon1.poke_type:
             for poke_type2 in pokemon2.poke_type:
                 temp_balance_index = 1
@@ -104,7 +105,9 @@ def main():
 
     pokemon1 = Pokemon(poke_search.get_data(input1))
     pokemon2 = Pokemon(poke_search.get_data(input2))
-
+    if pokemon1.name == 'error' or pokemon2.name == 'error':
+        print('Error request, please check if valid pokemon names or ids are entered and try again')
+        return
     pokemon1.set_type(poke_search.get_type(pokemon1.raw_data))
     pokemon2.set_type(poke_search.get_type(pokemon2.raw_data))
     res = poke_search.compare_pokemon_type(pokemon1, pokemon2)

@@ -6,6 +6,7 @@ In the case of no type advantage the program should output the name of the Poké
 
 
 ###Example Invocation
+
 ```
 ./program bulbasaur charmander
 ```
@@ -16,9 +17,11 @@ charmander
 ```
 
 ##Getting Start
+
 This project is written by Python 3.7.0. Please make sure that the test environment is based on Python 3.6 or later.
 
 ###Install and Implement Test Environment
+
 ```buildoutcfg
 pip install virtualenv
 virtualenv PokemonEvaluator
@@ -26,16 +29,19 @@ source PokemonEvaluator/venv/bin/activate
 ```
 
 ###Install Essential Site Package
+
 ```buildoutcfg
 pip install -r requirements.txt
 ``` 
 
 ### Main Program
+
 ```
 ./scripts/run bulbasaur charmander
 ```
 
 ## Authors
+
 * **Shawn Xu** - Programmer
 
   shawnxu0420@gmail.com

@@ -115,7 +115,7 @@ def main():
         print(res)
         return
     else:
-        res = poke_search.compare_pokemon_score(pokemon1,pokemon2)
+        res = poke_search.compare_pokemon_score(pokemon1, pokemon2)
         if res != 0:
             print(res)
             return
